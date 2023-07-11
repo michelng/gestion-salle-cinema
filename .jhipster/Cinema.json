@@ -1,0 +1,41 @@
+{
+  "applications": "*",
+  "dto": "mapstruct",
+  "entityTableName": "cinema",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "longitude",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "latitude",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "altitude",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "nombreSalles",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "Cinema",
+  "relationships": [
+    {
+      "otherEntityName": "salle",
+      "relationshipName": "cinema",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

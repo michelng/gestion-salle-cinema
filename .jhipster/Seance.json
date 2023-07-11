@@ -1,0 +1,25 @@
+{
+  "applications": "*",
+  "dto": "mapstruct",
+  "entityTableName": "seance",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "heureDebut",
+      "fieldType": "Instant"
+    }
+  ],
+  "name": "Seance",
+  "relationships": [
+    {
+      "otherEntityName": "projectionFilm",
+      "relationshipName": "seance",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

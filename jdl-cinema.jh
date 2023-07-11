@@ -1,0 +1,91 @@
+
+entity Cinema {
+	id Long,
+    name String,
+    longitude Double,
+    latitude Double,
+    altitude Double,
+    nombreSalles Integer
+}
+
+entity Ville {
+	id Long,
+    name String,
+    longitude Double,
+    latitude Double,
+    altitude Double
+}
+
+entity Salle {
+	id Long,
+    name String,
+    nombrePlaces Integer
+}
+
+entity Place {
+	id Long,
+    numero Integer,
+    longitude Double,
+    latitude Double,
+    altitude Double
+}
+
+entity Categorie {
+	id Long,
+    name String
+}
+
+entity Film {
+	id Long,
+    titre String,
+    duree Double,
+    realisateur String,
+    photo String,
+    dateSortie Instant
+}
+
+entity ProjectionFilm {
+	id Long,
+    dateProjection Instant,
+    prix Double
+}
+
+entity Seance {
+	id Long,
+    heureDebut Instant
+}
+
+entity Ticket {
+	id Long,
+    nomClient String,
+    prix Double
+    codePayement Integer,
+    reserve Boolean
+}
+
+relationship OneToMany {
+	Ville{ville} to Cinema
+    Cinema{cinema} to Salle
+    Salle{salle} to Place
+    Place{salle} to Ticket
+    ProjectionFilm{projectionFilm} to Ticket
+    Categorie{ville} to Film
+}
+
+relationship OneToOne {
+	Seance{seance} to ProjectionFilm
+}
+
+relationship ManyToOne {
+	Ville{ville} to Cinema
+}
+
+
+ //Use Data Transfer Objects (DTO)
+ dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+
+// Set an angular suffix
+// angularSuffix * with mySuffix

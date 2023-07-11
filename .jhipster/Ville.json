@@ -1,0 +1,43 @@
+{
+  "applications": "*",
+  "dto": "mapstruct",
+  "entityTableName": "ville",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "longitude",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "latitude",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "altitude",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "Ville",
+  "relationships": [
+    {
+      "otherEntityName": "cinema",
+      "relationshipName": "ville",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "cinema",
+      "relationshipName": "ville",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

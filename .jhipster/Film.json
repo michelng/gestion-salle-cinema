@@ -1,0 +1,34 @@
+{
+  "applications": "*",
+  "dto": "mapstruct",
+  "entityTableName": "film",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "titre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "duree",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "realisateur",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "photo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dateSortie",
+      "fieldType": "Instant"
+    }
+  ],
+  "name": "Film",
+  "relationships": [],
+  "service": "serviceImpl"
+}
