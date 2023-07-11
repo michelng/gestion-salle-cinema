@@ -1,0 +1,29 @@
+{
+  "applications": "*",
+  "dto": "mapstruct",
+  "entityTableName": "salle",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nombrePlaces",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "Salle",
+  "relationships": [
+    {
+      "otherEntityName": "place",
+      "relationshipName": "salle",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

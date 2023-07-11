@@ -1,0 +1,30 @@
+{
+  "applications": "*",
+  "dto": "mapstruct",
+  "entityTableName": "ticket",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "nomClient",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "prix",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "codePayement",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "reserve",
+      "fieldType": "Boolean"
+    }
+  ],
+  "name": "Ticket",
+  "relationships": [],
+  "service": "serviceImpl"
+}

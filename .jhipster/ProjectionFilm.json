@@ -1,0 +1,29 @@
+{
+  "applications": "*",
+  "dto": "mapstruct",
+  "entityTableName": "projection_film",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "dateProjection",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "prix",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "ProjectionFilm",
+  "relationships": [
+    {
+      "otherEntityName": "ticket",
+      "relationshipName": "projectionFilm",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

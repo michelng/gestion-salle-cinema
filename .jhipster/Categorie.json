@@ -1,0 +1,25 @@
+{
+  "applications": "*",
+  "dto": "mapstruct",
+  "entityTableName": "categorie",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Categorie",
+  "relationships": [
+    {
+      "otherEntityName": "film",
+      "relationshipName": "ville",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

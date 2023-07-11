@@ -1,0 +1,37 @@
+{
+  "applications": "*",
+  "dto": "mapstruct",
+  "entityTableName": "place",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "numero",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "longitude",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "latitude",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "altitude",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "Place",
+  "relationships": [
+    {
+      "otherEntityName": "ticket",
+      "relationshipName": "salle",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}
